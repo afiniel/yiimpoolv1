@@ -15,15 +15,15 @@ echo -e "${YELLOW}Running pre-flight checks...${NC}\n"
 UBUNTU_DESCRIPTION=$(lsb_release -d | sed 's/.*:\s*//')
 UBUNTU_VERSION=$(lsb_release -rs)
 
-if [[ "${UBUNTU_DESCRIPTION}" == "Ubuntu 20.04 LTS" ]]; then
+if [[ "${UBUNTU_DESCRIPTION}" =~ "Ubuntu 20.04" ]]; then
   DISTRO=20
-elif [[ "${UBUNTU_DESCRIPTION}" == "Ubuntu 18.04 LTS" ]]; then
+elif [[ "${UBUNTU_DESCRIPTION}" =~ "Ubuntu 18.04" ]]; then
   DISTRO=18
-elif [[ "${UBUNTU_DESCRIPTION}" == "Ubuntu 16.04 LTS" ]]; then
+elif [[ "${UBUNTU_DESCRIPTION}" =~ "Ubuntu 16.04" ]]; then
   DISTRO=16
-elif [[ "${UBUNTU_DESCRIPTION}" == "Ubuntu 24.04 LTS" ]]; then
+elif [[ "${UBUNTU_DESCRIPTION}" =~ "Ubuntu 24.04" ]]; then
   DISTRO=24
-elif [[ "${UBUNTU_DESCRIPTION}" == "Ubuntu 23.04 LTS" ]]; then
+elif [[ "${UBUNTU_DESCRIPTION}" =~ "Ubuntu 23.04" ]]; then
   DISTRO=23
 else
   echo "This script only supports Ubuntu 16.04 LTS, 18.04 LTS, 20.04 LTS, 24.04 LTS, and 23.04 LTS."
