@@ -107,6 +107,7 @@ if [[ ("$UsingSSH" == "yes") ]]; then
     if [ ! -d $STORAGE_ROOT ]; then
         sudo mkdir -p $STORAGE_ROOT
     fi
+    sudo usermod -aG $STORAGE_ROOT $yiimpadmin
 
     # Save the global options in /etc/yiimpool.conf so that standalone
     # tools know where to look for data.

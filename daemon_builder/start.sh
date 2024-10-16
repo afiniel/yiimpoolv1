@@ -11,7 +11,7 @@ source /etc/yiimpool.conf
 
 # Create DaemonBuilder directory
 if [ ! -d $STORAGE_ROOT/daemon_builder ]; then
-mkdir -p $STORAGE_ROOT/daemon_builder
+sudo mkdir -p $STORAGE_ROOT/daemon_builder
 fi
 
 # Start the DeamonBuilder installation.

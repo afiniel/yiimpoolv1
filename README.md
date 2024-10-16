@@ -47,7 +47,7 @@
 </ul>
 
 <h3>To install:</h3>
-<pre><code>curl https://raw.githubusercontent.com/afiniel/Yiimpoolv1/master/install.sh | bash</code></pre>
+<pre><code>curl https://raw.githubusercontent.com/afiniel/Yiimpoolv1/master/install.sh | sudo bash</code></pre>
 <p>Installation will take approximately 15 minutes. The installer will notify you when the installation is complete. If you encounter any issues, open an issue on GitHub.</p>
 
 <h3>Finish!</h3>

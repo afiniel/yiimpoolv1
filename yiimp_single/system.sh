@@ -68,9 +68,9 @@ echo
 echo -e "$MAGENTA Installing MariaDB..${NC}"
 hide_output sudo apt-key adv --recv-keys --keyserver hkp://keyserver.ubuntu.com:80 0xF1656F24C74CD1D8
 
-DISTRO=$(lsb_release -sc)
+DISTRO_TEXT=$(lsb_release -sc)
 
-case "$DISTRO" in
+case "$DISTRO_TEXT" in
     "xenial")  # Ubuntu 16.04
         sudo add-apt-repository 'deb [arch=amd64,arm64,i386,ppc64el] http://mirror.one.com/mariadb/repo/10.4/ubuntu xenial main' >/dev/null 2>&1
         ;;
@@ -81,7 +81,7 @@ case "$DISTRO" in
         sudo add-apt-repository 'deb [arch=amd64,arm64,ppc64el,s390x] http://mirror.one.com/mariadb/repo/10.4/ubuntu focal main' >/dev/null 2>&1
         ;;
     *)
-        echo "Unsupported Ubuntu version: $DISTRO"
+        echo "Unsupported Ubuntu version: $DISTRO_TEXT"
         exit 1
         ;;
 esac
